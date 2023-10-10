@@ -6,6 +6,7 @@ info = 'OS info is \n{}\n\nPython version is {} {}'.format(
     sys.version,
     platform.architecture(),
 )
+print("This is your system info:")
 print(info)
 
 with open('os_info.txt', 'w', encoding='utf8') as file:
