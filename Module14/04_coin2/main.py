@@ -4,6 +4,8 @@ def find_monetka(c1,c2,r):
         print('где-то рядом')
     else:
         print('в области нет')
+
+
 print('Введите координаты монетки:')
 x=float(input("X: "))
 y=float(input("Y: "))
