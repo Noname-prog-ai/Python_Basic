@@ -1,14 +1,12 @@
 # TODO здесь писать код
 
 # Список чисел для работы (итоговый алгоритм проверьте на разных списках, придуманных самостоятельно):
-numbers_list = [7, 14, 3, 18, 21, 10, 9, 6]
-arr = numbers_list
-print('Исходный список:', numbers_list)
+numbers_list = [1, 2, 3, 4, 5, 6, 7, 8]
 
-n = len(arr)
-for i in range(n - 1):
-    for j in range(n - i - 1):
-        if arr[j] < arr[j + 1]:
-            arr[j], arr[j + 1] = arr[j + 1], arr[j]
+pnumbers_list = (numbers_list[::-1])
 
-print('Отсортированный список четных чисел:', [n for n in arr if n % 2 == 0])
+print('Четные числа в обратном порядке: ')
+for number in pnumbers_list:
+  if number % 2 == 0:
+    print(number, end=' ')
+
