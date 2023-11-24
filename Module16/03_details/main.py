@@ -3,3 +3,6 @@ shop = [['каретка', 1200], ['шатун', 1000], ['седло', 300],
         ['обод', 2000], ['шатун', 200], ['седло', 2700]]
 
 # TODO здесь писать код
+name = input('Название детали: ').lower()
+prices = [product[1] for product in shop if product[0] == name]
+print(f'Кол-во деталей - {len(prices)}\nОбщая стоимость - {sum(prices)}')
