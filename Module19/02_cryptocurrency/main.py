@@ -1,6 +1,7 @@
 data = {
     "address": "0x544444444444",
     "ETH": {
+        "total_diff": 100,
         "balance": 444,
         "total_in": 444,
         "total_out": 4
@@ -10,7 +11,7 @@ data = {
         {
             "fst_token_info": {
                 "address": "0x44444",
-                "name": "fdf",
+                "name": "doge",
                 "decimals": 0,
                 "symbol": "dsfdsf",
                 "total_supply": "3228562189",
@@ -22,7 +23,7 @@ data = {
             },
             "balance": 5000,
             "totalIn": 0,
-            "total_out": 0
+
         },
         {
             "sec_token_info": {
@@ -35,7 +36,7 @@ data = {
                 "last_updated": 1520452201,
                 "issuances_count": 0,
                 "holders_count": 20707,
-                "price": False
+                "total_price": False
             },
             "balance": 500,
             "totalIn": 0,
@@ -46,3 +47,5 @@ data = {
 
 
 # TODO здесь писать код
+from pprint import pprint
+pprint(data)
