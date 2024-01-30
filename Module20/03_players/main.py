@@ -5,3 +5,4 @@ players = {
 }
 
 # TODO здесь писать код
+print([sum((key, value), ()) for key, value in players.items()])
