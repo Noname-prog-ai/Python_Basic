@@ -13,25 +13,28 @@ site = {
 
 # TODO здесь писать код
 import copy
-def func_all(site):
-  for _ in range(question):
-      product = input('Введите название продукта для нового сайта: ').lower()
-      print(f'Сайт для {product}:')
-      site_copy = copy.deepcopy(site)
-      site_copy['html']['head']['title'] = f'Куплю/продам {product} недорого'
-      site_copy['html']['body']['h2'] = f'У нас самая низкая цена на {product}'
-      func(site_copy)
+def find_key(struct, key, meaning):
+  if key in struct:
+    struct[key] = meaning
+    return site
+  for sub_struct in struct.values():
+    if isinstance(sub_struct, dict):
+      result = find_key(sub_struct, key, meaning)
+      if result:
+        return site
 
 
-def func(s, depth=0):
-  for i in s:
-      print(' ' * depth, i)
-      if isinstance(s[i], dict):
-          func(s[i], depth + 1)
-      else:
-          print(' ' * (depth + 1), ' '.join(s[i]))
-
-
-question = int(input('\nСколько будет сайтов: '))
-func_all(site)
-
+number_sites = int(input('Скалько сайтов:'))
+d_copy = dict()
+goods = dict()
+for _ in range(number_sites):
+  product_name = input("Введите название продукта для нового сайта:")
+  key = {'title': f'Куплю/продам {product_name}) недорогo','h2': f'У нас самая низкая цена на {product_name}'}
+  for i in key:
+    find_key(site, i, key[i])
+  name_of_product = f'Сайт для {product_name}:'
+  d_copy = copy.deepcopy(site)
+  goods[name_of_product] = d_copy
+  for key, value in goods.items():
+    print(key)
+    print(value)
