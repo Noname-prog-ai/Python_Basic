@@ -25,3 +25,10 @@ store = {
 }
 
 # TODO здесь писать код
+for item in goods.keys():
+  total_price = 0
+  total_count = 0
+  for i_list in range(len(store[goods[item]])):
+    total_price += store[goods[item]][i_list]['quantity'] * store[goods[item]][i_list]['price']
+    total_count += store[goods[item]][i_list]['quantity']
+  print(f'{item} - {total_count} шт, стоимость {total_price} руб')

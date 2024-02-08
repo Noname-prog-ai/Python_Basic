@@ -11,3 +11,13 @@ violator_songs = {
 }
 
 # TODO здесь писать код
+summ = 0
+n = int(input("Сколько песен выбрать? "))
+
+for i in range(n):
+  name = input("Название "+str(i+1)+" песни: ")
+  time = violator_songs[name]
+  summ = summ + time
+
+
+print("Общее время звучания песен:",round(summ, 2)," минут")
