@@ -1,9 +1,11 @@
 # TODO здесь писать код
 import random
+from random import randint, choice
 
 numbers_sum = 0
 flag = True
-
+error_massage = "Вас постигла неудача!"
+exceptions = (ValueError, IndexError, OSError)
 while flag:
   try:
     random_number = random.randint(1, 13)
@@ -15,7 +17,8 @@ while flag:
       print("Вы успешно выполнили условие для выходи из порочного цикла!")
       flag = False
   except ValueError:
-    print("Вас постигла неудача!")
+    exception = choice(exceptions)
+    raise exception(error_massage)
     flag = False
   else:
     with open("out_file.txt", "a", encoding="utf-8") as out_file:
