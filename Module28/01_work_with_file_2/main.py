@@ -1,32 +1,31 @@
 # TODO здесь писать код
 import os
 
-
-class FileManager:
+class filemanager:
 
     def __init__(self, filename):
         self.filename = filename
 
     def __enter__(self):
         if not os.path.exists(self.filename):
-            """Создание файла, если он не существует"""
+            """создание файла, если он не существует"""
             open(self.filename, 'w').close()
-            """Открытие файла в режиме записи"""
+            """открытие файла в режиме записи"""
         self.file = open(self.filename, 'w')
         return self.file
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        """Закрытие файла"""
+        """закрытие файла"""
         self.file.close()
-        """Подавление всех исключений"""
+        """подавление всех исключений"""
         return True
 
     def write_file(self, data):
-        """Запись данных в файл"""
+        """запись данных в файл"""
         self.file.write(data)
 
     def read_file(self):
-        """Чтение данных из файла"""
+        """чтение данных из файла"""
         return self.file.read()
 
 
@@ -35,8 +34,8 @@ class FileManager:
 
 
 
-with FileManager('example.txt') as file:
-    file.write_file('Hello, world!')
+with filemanager('example.txt') as file:
+    file.write_file('hello, world!')
 
-with FileManager('example.txt') as file:
+with filemanager('example.txt') as file:
     print(file.read_file())
