@@ -5,3 +5,9 @@ Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, v
 """
 
 # TODO здесь писать код
+import re
+"""Поиск всех слов, состоящих из четырех букв"""
+words = re.findall(r'\b\w{4}\b', text)
+
+"""Вывод результата"""
+print(words)
