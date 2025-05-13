@@ -19,5 +19,8 @@ while True:
             print('Прости, ', name, ' но мест нет.', sep="")
 
     elif guest == 'ушел':
-        print('Пока,',name)
-        guests.remove(name)
+        if name in guests:
+            print('Пока,',name)
+            guests.remove(name)
+        else:
+            print('Такого имени нет в списке')
