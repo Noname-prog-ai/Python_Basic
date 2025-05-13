@@ -11,4 +11,3 @@ words = re.findall(r'\b\w{4}\b', text)
 
 """Вывод результата"""
 print(words)
-

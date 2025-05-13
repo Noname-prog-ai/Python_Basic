@@ -27,4 +27,3 @@ phone_numbers = ['9999999999', '999999-999', '99999x9999']
 
 """Проверяем номера"""
 check_phone_numbers(phone_numbers)
-
