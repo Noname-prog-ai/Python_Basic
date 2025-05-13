@@ -20,4 +20,3 @@ taxi_numbers = taxi_pattern.findall(numbers)
 """Выводим результаты"""
 print('Список номеров частных автомобилей:', private_car_numbers)
 print('Список номеров такси:', taxi_numbers)
-
