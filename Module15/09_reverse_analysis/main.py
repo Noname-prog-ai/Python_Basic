@@ -9,4 +9,3 @@ print('Четные числа в обратном порядке: ')
 for number in pnumbers_list:
   if number % 2 == 0:
     print(number, end=' ')
-
