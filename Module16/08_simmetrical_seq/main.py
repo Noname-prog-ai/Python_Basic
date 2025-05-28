@@ -15,4 +15,4 @@ else:
         for i in range(count):
             copy_arr.append(copy_arr[count-i-1])
             print(f"Нужно приписать чисел: {count}")
-            print(f"Сами числа: {copy_arr[-count:][::-1]}")
+            print(f"Сами числа: {copy_arr[-count:][::-1]}") 
