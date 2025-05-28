@@ -9,4 +9,4 @@ for number in range(one, two + 1):
         if str_number.count(digit) > 2:
             answer.append(number)
 print(f'Годы от {one} до {two} с тремя одинаковыми цифрами:')
-print(*answer, sep='\n')
+print(*answer, sep='\n') 
